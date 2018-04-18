@@ -1,14 +1,11 @@
-#!/bin/bash
+FROM localhost/afcowie/fedora:27
 
-set -e
-set -x
-
-dnf install -y \
+RUN dnf install -y \
 	make \
 	pandoc \
 	inkscape
 
-dnf install -y \
+RUN dnf install -y \
 	latexmk \
 	texlive-collection-latex \
 	texlive-collection-fontsrecommended \
@@ -18,4 +15,3 @@ dnf install -y \
 	texlive-upquote \
 	texlive-microtype
 	
-
