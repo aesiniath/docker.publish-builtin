@@ -3,7 +3,8 @@ FROM localhost/afcowie/fedora:27
 RUN dnf install -y \
 	make \
 	pandoc \
-	inkscape
+	inkscape \
+ && dnf clean all
 
 RUN dnf install -y \
 	latexmk \
@@ -13,5 +14,6 @@ RUN dnf install -y \
 	texlive-libertine \
 	texlive-memoir \
 	texlive-upquote \
-	texlive-microtype
-	
+	texlive-microtype \
+ && dnf clean all
+
