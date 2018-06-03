@@ -1,4 +1,4 @@
-FROM localhost/afcowie/fedora:27
+FROM localhost/afcowie/fedora:28
 
 RUN dnf install -y \
 	make \
