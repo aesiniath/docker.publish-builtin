@@ -8,13 +8,17 @@ RUN dnf install -y \
 
 RUN dnf install -y \
 	latexmk \
-	texlive-collection-latex \
-	texlive-collection-fontsrecommended \
-	texlive-inconsolata \
-	texlive-libertine \
+	texlive-collection-xetex \
 	texlive-memoir \
 	texlive-upquote \
 	texlive-microtype \
+	texlive-euenc \
+ && dnf clean all
+
+RUN dnf install -y \
+	linux-libertine-fonts \
+	texlive-tex-gyre \
+	levien-inconsolata-fonts \
  && dnf clean all
 
 WORKDIR /mnt
