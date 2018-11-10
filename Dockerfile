@@ -1,8 +1,6 @@
-FROM localhost/afcowie/fedora:28
+FROM localhost/afcowie/fedora:29
 
 RUN dnf install -y \
-	make \
-	pandoc \
 	librsvg2-tools \
  && dnf clean all
 
@@ -13,6 +11,7 @@ RUN dnf install -y \
 	texlive-upquote \
 	texlive-microtype \
 	texlive-euenc \
+	texlive-tabto-ltx \
  && dnf clean all
 
 RUN dnf install -y \
