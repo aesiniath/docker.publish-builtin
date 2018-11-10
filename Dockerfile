@@ -1,19 +1,24 @@
-FROM localhost/afcowie/fedora:28
+FROM localhost/afcowie/fedora:29
 
 RUN dnf install -y \
-	make \
-	pandoc \
-	inkscape \
+	librsvg2-tools \
  && dnf clean all
 
 RUN dnf install -y \
 	latexmk \
-	texlive-collection-latex \
-	texlive-collection-fontsrecommended \
-	texlive-inconsolata \
-	texlive-libertine \
+	texlive-collection-xetex \
 	texlive-memoir \
 	texlive-upquote \
 	texlive-microtype \
+	texlive-euenc \
+	texlive-tabto-ltx \
  && dnf clean all
+
+RUN dnf install -y \
+	linux-libertine-fonts \
+	texlive-tex-gyre \
+	levien-inconsolata-fonts \
+ && dnf clean all
+
+WORKDIR /mnt
 
