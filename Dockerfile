@@ -1,24 +1,17 @@
-FROM localhost/afcowie/fedora:29
+FROM localhost/afcowie/debian:stretch
 
-RUN dnf install -y \
-	librsvg2-tools \
- && dnf clean all
+RUN apt-get install \
+	librsvg2-bin
 
-RUN dnf install -y \
+RUN apt-get install \
 	latexmk \
-	texlive-collection-xetex \
-	texlive-memoir \
-	texlive-upquote \
-	texlive-microtype \
-	texlive-euenc \
-	texlive-tabto-ltx \
- && dnf clean all
+	texlive-xetex \
+	texlive-latex-recommended \
+	texlive-latex-extra
 
-RUN dnf install -y \
-	linux-libertine-fonts \
-	texlive-tex-gyre \
-	levien-inconsolata-fonts \
- && dnf clean all
+RUN apt-get install \
+	texlive-fonts-recommended \
+	texlive-fonts-extra
 
 WORKDIR /mnt
 
