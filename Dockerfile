@@ -8,6 +8,7 @@ RUN dnf install -y \
 	latexmk \
 	texlive-collection-xetex \
 	texlive-memoir \
+	texlive-import \
 	texlive-upquote \
 	texlive-microtype \
 	texlive-euenc \
