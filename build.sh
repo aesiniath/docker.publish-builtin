@@ -1,6 +1,6 @@
 #!/bin/bash -e
 
 docker build \
-	--tag=localhost/afcowie/publish:latest \
+	--tag=docker.io/oprdyn/publish-default:latest \
 	--network=proxy \
 	.

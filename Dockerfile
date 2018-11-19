@@ -1,4 +1,4 @@
-FROM localhost/afcowie/fedora:29
+FROM docker.io/oprdyn/fedora:29
 
 RUN dnf install -y \
 	librsvg2-tools \
