@@ -13,6 +13,7 @@ RUN dnf install -y \
 	texlive-microtype \
 	texlive-euenc \
 	texlive-tabto-ltx \
+	texlive-framed \
  && dnf clean all
 
 RUN dnf install -y \
