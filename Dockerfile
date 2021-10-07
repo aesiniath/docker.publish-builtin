@@ -14,6 +14,7 @@ RUN dnf install -y \
 	texlive-euenc \
 	texlive-tabto-ltx \
 	texlive-framed \
+	texlive-wrapfig \
  && dnf clean all
 
 RUN dnf install -y \
